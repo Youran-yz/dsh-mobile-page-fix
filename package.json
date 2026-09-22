@@ -1,0 +1,46 @@
+{
+  "name": "dsh-mobile-page-fix",
+  "version": "0.1.0",
+  "description": "Mobile page fixes for the DeepSeek Harness web profile: the settings dialog becomes a full page instead of a floating overlay, and the plugin-market tab strip scrolls horizontally with single-column cards.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "mobile",
+    "settings",
+    "market"
+  ],
+  "engines": {
+    "dsh": ">=0.1.5-rc.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youran-yz/dsh-mobile-page-fix.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}
